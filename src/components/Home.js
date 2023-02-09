@@ -41,8 +41,8 @@ const Home=()=>{
     // console.log(root)
     // axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${input}%2c${country.value}&appid=${API_KEY}`)
     const search=(e)=>{
-        // if(e.key==='Enter'){
-            if(input!==''){
+        if(e.key==='Enter'){
+            // if(input!==''){
             console.log('Hello')
             setLoader('on')
             axios.get(`${base}weather?q=${input}&units=metric&APPID=${API_KEY}`)
