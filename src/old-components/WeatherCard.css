@@ -1,0 +1,87 @@
+.card{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border-radius: 10px;
+    
+    position: relative;
+}
+.Form{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.input{
+    margin-top: 5px;
+    /* background:linear-gradient(#0052D4,#6FB1Fc); */
+    background-color: #292c35;
+    color: #0052D4;
+    width: 60% !important;
+}
+.Field{
+    /* background:linear-gradient(#0052D4,#6FB1Fc); */
+    margin-top: 5px;
+    outline: none;
+    text-align: center;
+    font-size: medium;
+    background-color: #292c35;
+    border: none;
+    color: #0052D4;
+
+}
+.Box{
+    color: #0052D4;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.anime{
+    position: absolute;
+    /* top: 0px; */
+    /* bottom: 0px; */
+    /* left: 0px; */
+    color: red;
+    font-size: 20px;
+    size: 40px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    
+    
+}
+@keyframes example{
+    0% {top: 50px;}
+    /* 50% {top: 200px;} */
+    /* 75%{top:500px} */
+    100% {bottom: 0px;}
+}
+.bb{
+    left:0px;
+    /* top:50px; */
+}
+.Flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.snow{
+    background-image: url(../../public/snow.jpg);
+}
+.cloud{
+    background-image: url(../../public/clouds.jpg);
+}
+.color{
+    background-color: #0052D4 !important;
+}
+.hiden{
+    display: none;
+}
