@@ -14,6 +14,30 @@ const Home=()=>{
     const API_KEY='c397537ad5ee12b4b9895282f67e1fcb'
     const base="http://api.openweathermap.org/data/2.5/"
     let root=document.getElementById('root')
+    const search2=()=>{
+        if(input!==''){
+            console.log('Hello')
+            setLoader('on')
+            axios.get(`${base}weather?q=${input}&units=metric&APPID=${API_KEY}`)
+            
+            .then((result)=>{
+                console.log(result)
+                setWeather(result.data.weather[0].main)
+                setTemp(result.data.main.temp)
+                console.log(temp)
+                if(result.data.main.temp>15){
+                    console.log('bigger')
+                    root.classList.add('App')
+                }else{
+                    root.classList.remove('App')
+
+                }
+                setInput('')
+            }).finally(()=>{
+                setLoader('')
+             })
+        }
+    }
     // console.log(root)
     // axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${input}%2c${country.value}&appid=${API_KEY}`)
     const search=(e)=>{
@@ -57,7 +81,7 @@ const Home=()=>{
    return<div>
     
         <div className="Box">
-            <input type='text'placeholder="City ..." onKeyUp={search} onChange={(e)=>{setInput(e.target.value)}} value={input}></input>
+            <input type='text'placeholder="City ..." onKeyUp={search} onChange={(e)=>{setInput(e.target.value)}} onSubmit={search2} value={input}></input>
         </div>
         <div className="content">
             <div className="dateBox">
